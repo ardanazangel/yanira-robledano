@@ -45,7 +45,7 @@ const settings = {
 let isMouseActive = false; // Variable para controlar las interacciones con el mouse
 
 const images = [
-  "/imgs/1.jpg",
+  "/imgs/yanira.png",
   "/imgs/2.jpg",
   "/imgs/3.jpg",
   "/imgs/4.jpg",
