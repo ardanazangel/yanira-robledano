@@ -45,16 +45,16 @@ const settings = {
 let isMouseActive = false; // Variable para controlar las interacciones con el mouse
 
 const images = [
-  "./public/imgs/1.jpg",
-  "./public/imgs/2.jpg",
-  "./public/imgs/3.jpg",
-  "./public/imgs/4.jpg",
-  "./public/imgs/5.jpg",
-  "./public/imgs/6.jpg",
-  "./public/imgs/7.jpg",
-  "./public/imgs/8.jpg",
-  "./public/imgs/9.jpg",
-  "./public/imgs/10.jpg",
+  "/imgs/1.jpg",
+  "/imgs/2.jpg",
+  "/imgs/3.jpg",
+  "/imgs/4.jpg",
+  "/imgs/5.jpg",
+  "/imgs/6.jpg",
+  "/imgs/7.jpg",
+  "/imgs/8.jpg",
+  "/imgs/9.jpg",
+  "/imgs/10.jpg",
 ];
 
 const preloadImages = () => {
