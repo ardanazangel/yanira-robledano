@@ -46,7 +46,7 @@ img {
 html,
 body {
   overflow: visible;
-  background-color: #2835f8;
+  background-color: red;
   transition: all 0.2s;
 }
 
