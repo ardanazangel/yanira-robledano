@@ -316,6 +316,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
   }
   .title-about {
     width: 100%;
