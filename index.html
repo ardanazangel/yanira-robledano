@@ -3,15 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Yanira Robledano, diseñadora Especializada en Branding y Packaging">
-    <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="Yanira Robledano, diseñadora Especializada en Branding y Packaging"
+    />
+    <meta name="robots" content="index, follow" />
     <title>Yanira Robledano</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="banner-mobile" style=" color: white; height: 100svh; width: 100%; align-items: center; justify-content: center; flex-direction: column; z-index: 99999999999999; position: fixed;">
-        <h2>Web en construcción</h2>
-        <p>Para una mejor experiencia visita la web en formato desktop</p>
+  <body data-barba="wrapper">
+    <div
+      class="banner-mobile"
+      style="
+        color: white;
+        height: 100svh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 99999999999999;
+        position: fixed;
+      "
+    >
+      <h2>Web en construcción</h2>
+      <p>Para una mejor experiencia visita la web en formato desktop</p>
     </div>
     <nav>
       <div>
@@ -27,7 +42,7 @@
         </ul>
       </div>
     </nav>
-    <main class="app">
+    <main class="app" data-barba="container">
       <div class="background-white">
         <section class="hero">
           <div class="hero-wrapper">
@@ -55,10 +70,9 @@
 
         <section class="works-wrapper">
           <div class="works-section-spacer">
-          <div class="works-title-section-slider">
-            <div class="works-title-section-track">
-              <div class="work-title-section-wrap">
-                
+            <div class="works-title-section-slider">
+              <div class="works-title-section-track">
+                <div class="work-title-section-wrap">
                   <span class="big-letters">Works</span>
                 </div>
               </div>
@@ -66,41 +80,67 @@
           </div>
           <div id="work-container" class="work-left">
             <div class="work rellax" data-rellax-speed="0">
-            <a href="" class="works-links">
-              <img src="imgs/1.JPG" alt="" class="work-img" />
-              <div class="work-info">
-                <h2>Consejito de la Yaya</h2>
-                <h3>Consejito de la Yaya</h3>
-              </div>
-            </a>
+              <a href="consejitodelayaya.html" class="works-links">
+                <img src="imgs/1.JPG" alt="" class="work-img" />
+                <div class="work-info">
+                  <h2>Consejito de la Yaya</h2>
+                  <h3>Consejito de la Yaya</h3>
+                </div>
+              </a>
             </div>
           </div>
           <div id="work-container" class="work-right">
             <div class="work rellax" data-rellax-speed="3">
-                <a href="" class="works-links">
-                    <img src="imgs/1.JPG" alt="" class="work-img" />
-                    <div class="work-info">
-                      <h2>Suppies</h2>
-                      <h3>Consejito de la Yaya</h3>
-                    </div>
-                  </a>
+              <a href="" class="works-links">
+                <img src="imgs/1.JPG" alt="" class="work-img" />
+                <div class="work-info">
+                  <h2>Suppies</h2>
+                  <h3>Consejito de la Yaya</h3>
+                </div>
+              </a>
             </div>
           </div>
           <div id="work-container" class="work-center">
             <div class="work rellax" data-rellax-speed="2">
-              <img src="imgs/1.JPG" alt="" class="work-img" />
+              <a href="" class="works-links">
+                <img src="imgs/1.JPG" alt="" class="work-img" />
+                <div class="work-info">
+                  <h2>Suppies</h2>
+                  <h3>Consejito de la Yaya</h3>
+                </div>
+              </a>
             </div>
           </div>
         </section>
       </div>
-      <div class="footer" style="height: 100vh;"></div>
+      <section class="footer">
+        <div class="slider-footer">
+          <span class="slider-footer-text">Hablemos!</span>
+          <span class="slider-footer-text">·</span>
+          <span class="slider-footer-text">Hablemos!</span>
+          <span class="slider-footer-text">·</span>
+          <span class="slider-footer-text">Hablemos!</span>
+          <span class="slider-footer-text">·</span>
+          <span class="slider-footer-text">Hablemos!</span>
+          <span class="slider-footer-text">·</span>
+          <span class="slider-footer-text">Hablemos!</span>
+          <span class="slider-footer-text">·</span>
+          <span class="slider-footer-text">Hablemos!</span>
+        </div>
+      </section>
     </main>
 
     <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+      integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="script.js"></script>
   </body>
 </html>

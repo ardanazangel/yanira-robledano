@@ -1,6 +1,18 @@
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
 
+barba.init({
+  transitions: [{
+    name: 'default-transition',
+    leave() {
+      // create your stunning leave animation here
+    },
+    enter() {
+      // create your amazing enter animation here
+    }
+  }]
+});
+
 const rellax = new Rellax('.rellax');
 
 const hero = document.querySelector(".hero"),
@@ -169,7 +181,7 @@ function imgAboutMove (){
       end: "bottom",        // Termina cuando el top alcanza el 20% de la ventana
       scrub: 1,           // Suaviza la animación mientras haces scroll
     },
-    y: '-1px',                  // Mueve el elemento 300px a la derecha
+    y: '25%',                  // Mueve el elemento 300px a la derecha
     rotation: 45,
   });
 }
@@ -222,6 +234,21 @@ function textStagger () {
   });
 }
 
+function textStaggerBigText(){
+  const worksSection = document.querySelector('.works-wrapper')
+  gsap.to(".big-letters",{
+    scrollTrigger: {
+      trigger:".works-wrapper",
+      start: "top 10%",   // Inicia cuando la sección alcanza el 40% de la pantalla
+    },
+    opacity:1,
+    y:'0%',
+    ease: CustomEase.create("custom", "0.22, 1, 0.36, 1"),
+    duration: 1.2,
+  })
+  console.log(worksSection)
+}
+
 function changeBackgroundHover() {
   const linkElements = document.querySelectorAll('.works-links'); // Selecciona todos los elementos con la clase 'works-links'
   const navTextColor = document.querySelector('nav'); // Selecciona el elemento 'nav'
@@ -250,7 +277,7 @@ changeBackgroundHover()
 textStagger()
 imgAboutMove()
 initLenis();
-
 loader();
+textStaggerBigText()
 
 

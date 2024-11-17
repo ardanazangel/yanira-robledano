@@ -50,6 +50,11 @@ body {
   transition: all 0.2s;
 }
 
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .banner-mobile {
   display: none;
   
@@ -156,6 +161,7 @@ p {
   align-items: center;
   position: relative;
   color: #fafafa;
+  padding: 0rem 4rem;
 }
 
 .about-info-wrapper {
@@ -163,6 +169,7 @@ p {
   align-items: center;
   flex-direction: column;
   gap: 4rem;
+  position: relative;
 }
 
 .title-about {
@@ -177,6 +184,7 @@ p {
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 0rem 4rem 0rem 0rem;
 }
 
 .img-yanira {
@@ -237,7 +245,8 @@ p {
   font-family: Acma;
   pointer-events: none;
   z-index: 0;
-
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 #work-container {
@@ -290,6 +299,37 @@ p {
 }
 .work-info:hover {
   opacity: 1;
+}
+
+.footer{
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+}
+
+.slider-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  background-color: #fafafa;
+  padding: 2rem 0rem 1rem;
+  animation: scroll 10s linear infinite;
+}
+
+.slider-footer-text {
+  font-family: Acma;
+  color: #2835f8;
+  font-size: 8vw;
+}
+
+@keyframes scroll {
+  0% {
+    transform: rotate(2deg) translateX(0);
+  }
+  100% {
+    transform: rotate(2deg) translateX(-50%);
+  }
 }
 
 @media (max-width: 1024px) {
