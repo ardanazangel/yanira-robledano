@@ -1,3 +1,8 @@
+:root{
+  --background-color: #2835f8;
+  --principal-color:#fafafa;
+}
+
 @font-face {
   font-family: Acma;
   src: url("fonts/PPAcma-Medium.woff2");
@@ -10,6 +15,28 @@
   font-weight: 600;
 }
 
+.transition{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999999999999;
+  background-color: #fafafa;
+  height: 100svh;
+  width: 100vw;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+}
+
+.transition-logo-wrapper{
+  overflow: hidden;
+}
+
+.transition-logo{
+  width: 196px;
+  transform: translateY(110%);
+}
+
 nav {
   display: grid;
   width: 100%;
@@ -17,7 +44,7 @@ nav {
   padding: 1rem;
   position: fixed;
   z-index: 9999;
-  color: #fafafa;
+  color: var(--principal-color);
   transform: translateY(0%);
 }
 
@@ -46,7 +73,7 @@ img {
 html,
 body {
   overflow: visible;
-  background-color: #2835f8;
+  background-color: var(--background-color);
   transition: all 0.2s;
 }
 
@@ -60,15 +87,11 @@ body::-webkit-scrollbar {
   
 }
 
-.background-white {
-  background-color: #fafafa;
-}
-
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #fafafa;
+  background-color: var(--background-color);
   overflow: hidden;
   scale: 1;
   transform-origin: center;
@@ -79,8 +102,7 @@ body::-webkit-scrollbar {
   align-items: end;
   justify-content: center;
   pointer-events: none;
-  background-color: #2835f8;
-
+  background-color: var(--background-color);
   width: inherit;
   height: inherit;
   position: relative;
@@ -120,7 +142,7 @@ h1 {
   font-size: clamp(3.75rem, 2.922rem + 3.399vw, 7rem);
   line-height: 1.1em;
   pointer-events: none;
-  color: #fafafa;
+  color: var(--principal-color);
 }
 
 h2 {
@@ -145,7 +167,7 @@ h4 {
   font-family: Mori;
   font-size: 1.25rem;
   line-height: 1.2em;
-  color: #fafafa;
+  color: var(--principal-color);
 }
 
 p {
@@ -160,16 +182,17 @@ p {
   justify-content: start;
   align-items: center;
   position: relative;
-  color: #fafafa;
-  padding: 0rem 4rem;
+  color: var(--principal-color);
+  padding: 0rem 0rem;
 }
 
 .about-info-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 4rem;
   position: relative;
+  gap: 4rem;
+  z-index: 1;
 }
 
 .title-about {
@@ -184,14 +207,14 @@ p {
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 0rem 4rem 0rem 0rem;
+  z-index: 0;
 }
 
 .img-yanira {
   position: absolute;
   object-fit: cover;
   width: 18.75rem;
-  transform: translateY(75%);
+  transform: translateY(100%);
   bottom: 0px;
   aspect-ratio: 3/4;
 }
@@ -208,8 +231,6 @@ p {
   height: auto;
   gap: 20rem;
   overflow: visible;
-  
-  
 }
 
 .works-title-section-slider{
@@ -241,7 +262,7 @@ p {
 
 .big-letters{
   font-size: 20vw;
-  color: #fafafa;
+  color: var(--principal-color);
   font-family: Acma;
   pointer-events: none;
   z-index: 0;
@@ -285,9 +306,9 @@ p {
   width: 100%;
   border-radius: 4px;
   padding: 2rem;
-  background-color: #fafafa;
-  color: #2835f8;
-  border: 1px solid #2835f8;
+  background-color: var(--background-color);
+  color: var(--principal-color);
+  border: 1px solid var(--principal-color);
   opacity: 0;
   transition: opacity 0.2s;
   display: flex;
@@ -308,19 +329,30 @@ p {
   align-items: end;
 }
 
+.slider-footer-wrapper{
+  display: flex;
+  align-items: end;
+  height: 100%;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
 .slider-footer {
+  position: absolute;
   display: flex;
   flex-direction: row;
-  gap: 4rem;
-  background-color: #fafafa;
+  background-color: var(--background-color);
   padding: 2rem 0rem 1rem;
   animation: scroll 10s linear infinite;
+  overflow: hidden;
 }
 
 .slider-footer-text {
   font-family: Acma;
-  color: #2835f8;
+  color: var(--principal-color);
   font-size: 8vw;
+  margin-right: 4rem;
 }
 
 @keyframes scroll {
@@ -350,7 +382,7 @@ p {
 .banner-mobile {
     display: block;
     top: 0;
-    background-color: #2835f8;
+    background-color: var(--background-color);
     text-align: center;
     padding: 2rem;
     display: flex;

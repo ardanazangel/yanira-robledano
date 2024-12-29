@@ -25,21 +25,7 @@ function initLenis() {
     autoRaf: true,
   });
 
-  // Llamada inicial para detener el scroll al cargar
-  lenis.stop();
-
-  window.scrollTo(0, 0);
-
-  // Listen for the scroll event and log the event data
-  lenis.on("scroll", (e) => {
-    // Aquí puedes manejar los eventos de scroll
-  });
-
-  // Activa el scroll después de 5 segundos
-  setTimeout(() => {
-    lenis.start();
-  }, 2750);
-
+  lenis.start();
   // Loop de animación para Lenis
   function raf(time) {
     lenis.raf(time);
@@ -47,6 +33,7 @@ function initLenis() {
   }
   requestAnimationFrame(raf);
 }
+
 const settings = {
   isEnabled: false,
   count: 0,
@@ -54,19 +41,10 @@ const settings = {
   isMobile: /Mobi|Android/i.test(navigator.userAgent),
 };
 
-let isMouseActive = false; // Variable para controlar las interacciones con el mouse
+let isMouseActive = true; // Variable para controlar las interacciones con el mouse
 
 const images = [
   "/imgs/yanira.png",
-  "/imgs/2.jpg",
-  "/imgs/3.jpg",
-  "/imgs/4.jpg",
-  "/imgs/5.jpg",
-  "/imgs/6.jpg",
-  "/imgs/7.jpg",
-  "/imgs/8.jpg",
-  "/imgs/9.jpg",
-  "/imgs/10.jpg",
 ];
 
 const preloadImages = () => {
@@ -120,14 +98,6 @@ const animateImages = (x, y) => {
   }, 1250);
 };
 
-const autoAnimateImages = () => {
-  if (!settings.isMobile) return;
-  setInterval(() => {
-    const x = Math.random() * window.innerWidth*2;
-    const y = Math.random() * window.innerHeight;
-    animateImages(x, y);
-  }, 100);
-};
 
 // Evento del mouse
 hero.addEventListener("mousemove", (event) => {
@@ -142,24 +112,7 @@ hero.addEventListener("mousemove", (event) => {
   }
 });
 
-window.onload = () => {
-  window.scrollTo(0, 0);
 
-  preloadImages();
-  autoAnimateImages();
-
-  // Desactiva interacciones con el mouse al inicio
-  setTimeout(() => {
-    isMouseActive = true; // Activa el mouse después de dos segundos
-  }, 3000);
-
-};
-
-function loader() {
-  const tl = gsap.timeline({});
-
-
-}
 
 function titleMove (){
   gsap.to('.logo',{
@@ -249,35 +202,9 @@ function textStaggerBigText(){
   console.log(worksSection)
 }
 
-function changeBackgroundHover() {
-  const linkElements = document.querySelectorAll('.works-links'); // Selecciona todos los elementos con la clase 'works-links'
-  const navTextColor = document.querySelector('nav'); // Selecciona el elemento 'nav'
-  const titleSection = document.querySelector('.big-letters'); // Selecciona el elemento 'nav'
-
-
-  linkElements.forEach(linkElement => {
-    linkElement.addEventListener('mouseenter', () => {
-      document.body.style.backgroundColor = '#fafafa';
-      navTextColor.style.color = '#2835f8';
-      titleSection.style.color = '#2835f8';
-
-    });
-
-    linkElement.addEventListener('mouseleave', () => {
-      document.body.style.backgroundColor = '#2835f8';
-      navTextColor.style.color = '#fafafa';
-      titleSection.style.color = '#fafafa';
-
-    });
-  });
-}
-
-
-changeBackgroundHover()
 textStagger()
 imgAboutMove()
 initLenis();
-loader();
 textStaggerBigText()
 
 
